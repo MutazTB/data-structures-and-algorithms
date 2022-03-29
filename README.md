@@ -7,3 +7,5 @@
 3. [array-binary-search](array-binary-search/README.md)
 
 4. [Linked List](Challenge/LinkedList/LinkedList/README.md)
+
+5. [Linked List challenge 06](Challenge/LinkedList/LinkedList/LinkedList/README2.md)
