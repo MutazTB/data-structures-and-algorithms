@@ -23,4 +23,4 @@ Space : O(1)
 1. Addfirst method to add the value to first node
 2. Addlast method to add the value end of linked list
 3. search method to search for a value in the linked list if it's exsist or not.
-4. ToSstring to print the linked list .
+4. ToSstring to print the linked list.
