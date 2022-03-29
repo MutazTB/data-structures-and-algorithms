@@ -13,11 +13,11 @@ Create LinkedList class to add the linked list with Generic tyoe.
 ## Approach & Efficiency
  **Big O**
 
-Time : Append	O(n)
-       AddFirst O(1)
-       Search O(n)
-       AddAfter O(n)
-       AddBefore O(n)
+Time :1. Append O(n)
+      2. AddFirst O(1)
+      3. Search O(n)
+      4. AddAfter O(n)
+      5. AddBefore O(n)
 
 Space : O(1)
 
