@@ -6,16 +6,18 @@ namespace LinkedList
     {
         static void Main(string[] args)
         {
-            LinkedList<int> liste = new LinkedList<int>();
+            LinkedList<int> liste = new LinkedList<int>();            
+            
+            liste.Append(15);
+            liste.Append(20);
+            liste.AddFirst(1);
+            liste.AddBefore(1, 60);
+            liste.AddAfter(1, 63);
+            liste.Search(60);
+            liste.Search(63);
+            liste.ToSstring();
 
-            liste.AddLast(10);
-            liste.AddLast(15);
-            liste.AddLast(20);
-            //liste.AddFirst(1);
-            liste.Search(7);
-            liste.Search(10);
-            liste.ToString();
 
-        }
+        }       
     }
 }

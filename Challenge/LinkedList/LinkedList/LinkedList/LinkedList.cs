@@ -16,9 +16,98 @@ namespace LinkedList
             Head = null;
             Tail = null;
         }
+        // To add before the index in the linked list
+        public void AddBefore(T node, T data)
+        {
+            if (Head == null)
+            {
+                Head = new Node<T>(data);
+            }
+            Node<T> current = Head;
+            if (Head.Data.Equals(node))
+            {
+                Node<T> newNode = new Node<T>(data);
+                newNode.Next = current.Next;
+                Head = newNode;
+                newNode.Next = current;
+            }
+            else if (Head.next == null)
+            {
+                Console.WriteLine("Add Before function say node not exsist");
+            }
+            else
+            {
+                while (!current.Next.Data.Equals(node))
+                {
+                    if (current.Next == null)
+                    {
+                        Console.WriteLine("node not exsist");
+                        break;
+                    }
+                    else
+                    {
+                        current = current.Next;
+                        if (current.Next == null)
+                        {
+                            break;
+                        }
+                    }
+                }
+                if (current.Next == null)
+                {
+                    Console.WriteLine("Add Before function say node not exsist");
+                }
+                else
+                {
+                    Node<T> newNode = new Node<T>(data);
+                    newNode.Next = current.Next;
+                    current.Next = newNode;
+                }
+            }
+        }
+        // To add after the index in the linked list
+        public void AddAfter(T node, T data)
+        {
+            if (Head == null)
+            {
+                Head = new Node<T>(data);
+            }
 
+            Node<T> current = Head;
+            if (Head.Data.Equals(node))
+            {
+                Node<T> newNode = new Node<T>(data);
+                newNode.Next = current.Next;
+                current.Next = newNode;
+            }
+            else
+            {
+                while (!current.Data.Equals(node))
+                {
+                    if (current.Next == null)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        current = current.Next;
+                    }
+                }
+
+                if (current.Next == null)
+                {
+                    Console.WriteLine("Add After function say node not exsist");
+                }
+                else
+                {
+                    Node<T> newNode = new Node<T>(data);
+                    newNode.Next = current.Next;
+                    current.Next = newNode;
+                }
+            }
+        }
         // To add in the last of the linked list
-        public void AddLast(T value)
+        public void Append(T value)
         {
             Node<T> item = new Node<T>(value);
 
@@ -33,7 +122,6 @@ namespace LinkedList
                 Tail = item;
             }
         }
-
         // To display linked list
         public void ToSstring() 
         {
@@ -52,7 +140,7 @@ namespace LinkedList
                 Console.WriteLine("null");
             }
         }
-
+        // To add in the first of the linked list
         public void AddFirst(T value)
         {
             Node<T> item = new Node<T>(value);
@@ -68,7 +156,7 @@ namespace LinkedList
                 Head = item;
             }
         }
-
+        // To search in the linked list for Node
         public bool Search(T value)
         {
             Node<T> current = new Node<T>(value);
