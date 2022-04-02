@@ -9,3 +9,8 @@
 4. [Linked List](Challenge/LinkedList/LinkedList/README.md)
 
 5. [Linked List challenge 06](Challenge/LinkedList/LinkedList/LinkedList/README2.md)
+
+
+6. [KthFromEnd](Challenge/LinkedList/LinkedList/KTHLINKEDLIST/README.md) 
+
+
