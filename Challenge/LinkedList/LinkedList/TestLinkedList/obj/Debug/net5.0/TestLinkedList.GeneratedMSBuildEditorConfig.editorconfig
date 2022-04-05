@@ -7,4 +7,4 @@ build_property.PublishSingleFile =
 build_property.IncludeAllContentForSelfExtract = 
 build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
 build_property.RootNamespace = TestLinkedList
-build_property.ProjectDir = C:\Users\Mutaz\Desktop\LinkedList\LinkedList\TestLinkedList\
+build_property.ProjectDir = C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\Challenge\LinkedList\LinkedList\TestLinkedList\

@@ -5938,11 +5938,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\TestLinkedList\\TestLinkedList.csproj",
+      "projectUniqueName": "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\TestLinkedList\\TestLinkedList.csproj",
       "projectName": "TestLinkedList",
-      "projectPath": "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\TestLinkedList\\TestLinkedList.csproj",
+      "projectPath": "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\TestLinkedList\\TestLinkedList.csproj",
       "packagesPath": "C:\\Users\\Mutaz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\TestLinkedList\\obj\\",
+      "outputPath": "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\TestLinkedList\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Mutaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5959,8 +5959,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj": {
-              "projectPath": "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj"
+            "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj": {
+              "projectPath": "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj"
             }
           }
         }

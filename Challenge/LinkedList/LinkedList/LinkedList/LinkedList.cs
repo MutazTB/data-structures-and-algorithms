@@ -19,91 +19,54 @@ namespace LinkedList
         // To add before the index in the linked list
         public void AddBefore(T node, T data)
         {
+            Node<T> temp;
+            // if list is empty
             if (Head == null)
             {
-                Head = new Node<T>(data);
+                Console.WriteLine("List is empty");
+                return;
+            }
+            // if x is the first node the new node will be inserted before the first node
+            if (node.Equals(Head.Data))
+            {
+                temp = new Node<T>(data);
+                temp.Next = Head;
+                Head = temp;
+                return;
             }
             Node<T> current = Head;
-            if (Head.Data.Equals(node))
+            while (current.Next != null)
             {
-                Node<T> newNode = new Node<T>(data);
-                newNode.Next = current.Next;
-                Head = newNode;
-                newNode.Next = current;
+                if (current.Next.Data.Equals(node))
+                    break;
+                current = current.Next;
             }
-            else if (Head.next == null)
-            {
-                Console.WriteLine("Add Before function say node not exsist");
-            }
+            if (current.Next == null)
+                Console.WriteLine(node + " not present in the list");
             else
             {
-                while (!current.Next.Data.Equals(node))
-                {
-                    if (current.Next == null)
-                    {
-                        Console.WriteLine("node not exsist");
-                        break;
-                    }
-                    else
-                    {
-                        current = current.Next;
-                        if (current.Next == null)
-                        {
-                            break;
-                        }
-                    }
-                }
-                if (current.Next == null)
-                {
-                    Console.WriteLine("Add Before function say node not exsist");
-                }
-                else
-                {
-                    Node<T> newNode = new Node<T>(data);
-                    newNode.Next = current.Next;
-                    current.Next = newNode;
-                }
+                temp = new Node<T>(data);
+                temp.Next = current.Next;
+                current.Next = temp;
             }
         }
         // To add after the index in the linked list
         public void AddAfter(T node, T data)
         {
-            if (Head == null)
-            {
-                Head = new Node<T>(data);
-            }
-
             Node<T> current = Head;
-            if (Head.Data.Equals(node))
+            while (current != null)
             {
-                Node<T> newNode = new Node<T>(data);
-                newNode.Next = current.Next;
-                current.Next = newNode;
+                if (current.Data.Equals(node))
+                    break;
+                current = current.Next;
             }
+            if (current == null)
+                Console.WriteLine(node + " not present  the list");
             else
             {
-                while (!current.Data.Equals(node))
-                {
-                    if (current.Next == null)
-                    {
-                        break;
-                    }
-                    else
-                    {
-                        current = current.Next;
-                    }
-                }
-
-                if (current.Next == null)
-                {
-                    Console.WriteLine("Add After function say node not exsist");
-                }
-                else
-                {
-                    Node<T> newNode = new Node<T>(data);
-                    newNode.Next = current.Next;
-                    current.Next = newNode;
-                }
+                Node<T> temp = new Node<T>(data);
+                temp.Next = current.Next;
+                current.Next = temp;
             }
         }
         // To add in the last of the linked list
@@ -173,6 +136,67 @@ namespace LinkedList
             if(current == null)
             {
                 Console.WriteLine("Not found");
+            }
+            return false;
+        }
+
+        public bool kthFromEnd(int value)
+        {
+            if (value < 0)
+            {
+                return false;
+            }
+            int count = 0;
+            Node<T> prev, current, next;
+            prev = null;
+            current = Head;
+            if (Head == null)
+            {
+                Console.WriteLine("The list is empty");
+                return false;
+            }
+            // revers the linked list
+            while (current != null)
+            {
+                next = current.Next;
+                current.Next = prev;
+                prev = current;
+                current = next;
+            }
+            Head = prev;
+
+            // just for print after revers 
+            //while (Head != null)
+            //{
+            //    Console.Write("[" + Head.Data + "] -> ");
+            //    Head = Head.Next;
+            //}
+            //Console.WriteLine("null");
+
+            while (!Head.Data.Equals(null))
+            {
+                if (Head.Next == null)
+                {
+                    break;
+                }
+                else
+                {
+                    count++;
+                    Head = Head.Next;
+                }
+                if (count == value)
+                {
+                    Console.WriteLine(Head.Data);
+                    return true;
+                }
+            }
+            if (value == count)
+            {
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"The list's size less than {value}");
             }
             return false;
         }
