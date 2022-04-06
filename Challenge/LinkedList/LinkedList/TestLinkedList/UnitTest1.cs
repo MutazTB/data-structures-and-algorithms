@@ -129,6 +129,22 @@ namespace TestLinkedList
 
             Assert.True(list.kthFromEnd(index));
         }
+
+
+        [Theory]
+        [InlineData(new int[] { 10, 30, 50 }, new int[] { 20, 40, 60 })]
+        public void MergListTest(int[] nums, int[] nums2)
+        {
+            LinkedList.LinkedList<int> list = new LinkedList.LinkedList<int>();
+            LinkedList.LinkedList<int> listOne = new LinkedList.LinkedList<int>();
+            foreach (var num in nums)
+                listOne.Append(num);
+            LinkedList.LinkedList<int> listTwo = new LinkedList.LinkedList<int>();
+            foreach (var num in nums2)
+                listTwo.Append(num);
+            list.MergeLists(listOne, listTwo);
+            Assert.Equal("[10] -> [20] -> [30] -> [40] -> [50] -> [60] -> null", list.ToSstring());
+        }
         //[Theory]
         //[InlineData(new int[] { }, "null")]
         //[InlineData(new int[] { 1 }, "[1] -> null")]

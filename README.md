@@ -14,3 +14,5 @@
 6. [KthFromEnd](Challenge/LinkedList/LinkedList/KTHLINKEDLIST/README.md) 
 
 
+7. [MergeLists](Challenge/LinkedList/LinkedList/MergLists/README.md)
+
