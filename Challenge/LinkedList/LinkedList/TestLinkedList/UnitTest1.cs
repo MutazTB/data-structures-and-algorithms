@@ -104,8 +104,31 @@ namespace TestLinkedList
             list.AddAfter(index, data);
             Assert.True(list.Search(data));
         }
-        
 
+        [Theory]
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, -3)]// Where k is not a positive integer
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, 8)]// Where K is greater than the length of the linked lis
+        public void kthFromEndTestOne(int[] nums, int index)
+        {
+            LinkedList.LinkedList<int> list = new LinkedList.LinkedList<int>();
+            foreach (var num in nums)
+                list.AddFirst(num);
+
+            Assert.True(!list.kthFromEnd(index));
+        }
+
+        [Theory]
+        [InlineData(new int[] { 3 }, 0)]// Where the linked list is of a size 1
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, 4)]// Where k and the length of the list are the same
+        [InlineData(new int[] { 1, 2, 3, 4, 5 }, 2)]//  where k is not at the end, but somewhere in the middle of the linked list
+        public void kthFromEndTestTwo(int[] nums, int index)
+        {
+            LinkedList.LinkedList<int> list = new LinkedList.LinkedList<int>();
+            foreach (var num in nums)
+                list.AddFirst(num);
+
+            Assert.True(list.kthFromEnd(index));
+        }
         //[Theory]
         //[InlineData(new int[] { }, "null")]
         //[InlineData(new int[] { 1 }, "[1] -> null")]

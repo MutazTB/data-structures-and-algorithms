@@ -8,16 +8,20 @@ namespace LinkedList
         {
             LinkedList<int> liste = new LinkedList<int>();            
             
-            liste.Append(15);
-            liste.Append(20);
+            //liste.Append(15);
+            liste.AddFirst(20);
             liste.AddFirst(1);
-            liste.AddBefore(1, 60);
-            liste.AddAfter(1, 63);
+            liste.AddBefore(20, 50);
+            liste.AddAfter(20, 60);
+            liste.AddAfter(60, 600);
+            liste.AddBefore(20,5);
             liste.Search(60);
             liste.Search(63);
             liste.ToSstring();
+            Console.WriteLine("The KthFromEnd function output is :");
+            liste.kthFromEnd(3);
 
 
-        }       
+        }
     }
 }

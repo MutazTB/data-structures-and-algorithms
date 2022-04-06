@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj": {}
+    "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj": {
+    "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj",
+        "projectUniqueName": "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj",
         "projectName": "LinkedList",
-        "projectPath": "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj",
+        "projectPath": "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\LinkedList\\LinkedList.csproj",
         "packagesPath": "C:\\Users\\Mutaz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mutaz\\Desktop\\LinkedList\\LinkedList\\LinkedList\\obj\\",
+        "outputPath": "C:\\Users\\Mutaz\\datastructureandalgorithms\\data-structures-and-algorithms\\Challenge\\LinkedList\\LinkedList\\LinkedList\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mutaz\\AppData\\Roaming\\NuGet\\NuGet.Config",
