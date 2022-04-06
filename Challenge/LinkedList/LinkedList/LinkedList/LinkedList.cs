@@ -86,21 +86,22 @@ namespace LinkedList
             }
         }
         // To display linked list
-        public void ToSstring() 
+        public string ToSstring()
         {
             Node<T> start = Head;
+            string list = "";
             if (start == null)
             {
-                Console.WriteLine("Your llist is empty");
+                return "Your llist is empty";
             }
             else
             {
                 while (start != null)
                 {
-                    Console.Write("["+start.Data+"] -> ");
+                    list = list + "[" + start.Data + "] -> ";
                     start = start.Next;
                 }
-                Console.WriteLine("null");
+                return list + "null";
             }
         }
         // To add in the first of the linked list
@@ -199,6 +200,40 @@ namespace LinkedList
                 Console.WriteLine($"The list's size less than {value}");
             }
             return false;
+        }
+
+        public LinkedList<T> MergeLists(LinkedList<T> listOne, LinkedList<T> listTwo)
+        {
+            LinkedList<T> mergedList = new LinkedList<T>();
+            Node<T> currentOne = listOne.Head;
+            Node<T> currentTwo = listTwo.Head;
+            Node<T> currentMerged;
+            if (currentOne == null)
+            {                                                               //10   30   50
+                return listTwo;                                             //20   40   60 
+            }                                                               //10   20   30   40   50   60 
+            else if (currentTwo == null)
+            {
+                return listOne;
+            }
+            while (currentOne != null || currentTwo != null)
+            {
+                if (currentOne != null)
+                {
+                    currentMerged = currentOne;
+                    Append(currentMerged.Data);
+                    currentOne = currentOne.Next;
+                }
+                if (currentTwo != null)
+                {
+                    currentMerged = currentTwo;
+                    Append(currentMerged.Data);
+                    currentTwo = currentTwo.Next;
+                }
+
+            }
+            return mergedList;
+
         }
     }
 }
