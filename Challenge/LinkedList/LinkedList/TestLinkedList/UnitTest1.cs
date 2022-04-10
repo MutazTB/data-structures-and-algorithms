@@ -117,6 +117,7 @@ namespace TestLinkedList
             Assert.True(!list.kthFromEnd(index));
         }
 
+         
         [Theory]
         [InlineData(new int[] { 3 }, 0)]// Where the linked list is of a size 1
         [InlineData(new int[] { 1, 2, 3, 4, 5 }, 4)]// Where k and the length of the list are the same
@@ -130,6 +131,16 @@ namespace TestLinkedList
             Assert.True(list.kthFromEnd(index));
         }
 
+        [Fact]
+        public void kthFromEndSizeEqual()// Where k and the length of the list are the same
+        {
+            int[] nums = { 1, 2, 3, 4, 5 };
+            LinkedList.LinkedList<int> list = new LinkedList.LinkedList<int>();
+            foreach (var num in nums)
+                list.AddFirst(num);
+
+            Assert.True(list.kthFromEnd(nums.Length-1));
+        }
 
         [Theory]
         [InlineData(new int[] { 10, 30, 50 }, new int[] { 20, 40, 60 })]
