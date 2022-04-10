@@ -1,0 +1,16 @@
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\bin\Debug\net5.0\StackAndQueue.exe
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\bin\Debug\net5.0\StackAndQueue.deps.json
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\bin\Debug\net5.0\StackAndQueue.runtimeconfig.json
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\bin\Debug\net5.0\StackAndQueue.runtimeconfig.dev.json
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\bin\Debug\net5.0\StackAndQueue.dll
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\bin\Debug\net5.0\ref\StackAndQueue.dll
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\bin\Debug\net5.0\StackAndQueue.pdb
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\StackAndQueue.csproj.AssemblyReference.cache
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\StackAndQueue.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\StackAndQueue.AssemblyInfoInputs.cache
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\StackAndQueue.AssemblyInfo.cs
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\StackAndQueue.csproj.CoreCompileInputs.cache
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\StackAndQueue.dll
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\ref\StackAndQueue.dll
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\StackAndQueue.pdb
+C:\Users\Mutaz\datastructureandalgorithms\data-structures-and-algorithms\stack-and-queue\StackAndQueue\StackAndQueue\obj\Debug\net5.0\StackAndQueue.genruntimeconfig.cache
