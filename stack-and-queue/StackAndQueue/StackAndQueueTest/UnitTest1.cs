@@ -122,5 +122,18 @@ namespace StackAndQueueTest
             StackAndQueue.Queue<int> queue = new StackAndQueue.Queue<int>();            
             Assert.True(queue.IsEmpty());
         }
+
+         [Fact]
+        public void PseudoQueueTest()
+        {
+            PseudoQueue<int> pseudoQueue = new PseudoQueue<int>();
+
+            pseudoQueue.Enqueue(20);
+            pseudoQueue.Enqueue(15);
+            pseudoQueue.Enqueue(10);
+            pseudoQueue.Enqueue(5);
+            Assert.Equal(20, pseudoQueue.Dequeue().Value);
+            
+        }
     }
 }
