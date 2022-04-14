@@ -17,3 +17,5 @@
 7. [MergeLists](Challenge/LinkedList/LinkedList/MergLists/README.md)
 
 8. [Stack and Queue](stack-and-queue/README.md)
+
+9. [Pseudo Queue](stack-and-queue/StackAndQueue/PseudoQueueREDME.md)
