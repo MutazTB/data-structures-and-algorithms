@@ -19,3 +19,5 @@
 8. [Stack and Queue](stack-and-queue/README.md)
 
 9. [Pseudo Queue](stack-and-queue/StackAndQueue/PseudoQueueREDME.md)
+
+10. [Animal Shelter](Animal-Shelter/README.md)
