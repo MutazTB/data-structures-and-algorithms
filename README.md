@@ -21,3 +21,5 @@
 9. [Pseudo Queue](stack-and-queue/StackAndQueue/PseudoQueueREDME.md)
 
 10. [Animal Shelter](Animal-Shelter/README.md)
+
+11. [Multi-bracket Validation.](stack-queue-brackets/README.md)
