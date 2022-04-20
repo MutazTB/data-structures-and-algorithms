@@ -11,4 +11,4 @@ Implement the following methods:
 The Big O of the Dequeue algorithm is O(N) but for enqueue is O(1).
 
 ## Whiteboard 
-![Image](images/AnimalShelter.png)
+![Image](images/AnimalShilter.png)
