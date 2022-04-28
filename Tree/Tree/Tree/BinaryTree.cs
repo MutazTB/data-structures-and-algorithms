@@ -66,5 +66,28 @@ namespace Tree
 
             return Values;
         }
+
+        public int findMax(Node node)
+        {
+            if (node == null)
+            {
+                return 0;
+            }
+
+            int root = node.Value;
+            int left = findMax(node.Left);
+            int right = findMax(node.Right);
+            
+                if (left > root)
+                {
+                    root = left;                    
+                }
+                if (right > root)
+                {
+                    root = right;                   
+                }
+                
+            return root;
+        }       
     }
 }

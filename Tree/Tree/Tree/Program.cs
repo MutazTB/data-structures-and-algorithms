@@ -10,9 +10,9 @@ namespace Tree
             Console.WriteLine();
 
             Node n1 = new Node(1);
-            Node n2 = new Node(2);
-            Node n3 = new Node(3);
-            Node n4 = new Node(4);
+            Node n2 = new Node(200);
+            Node n3 = new Node(32);
+            Node n4 = new Node(45);
             Node n5 = new Node(5);           
 
             BinaryTree tree1 = new BinaryTree(n1);
@@ -34,6 +34,11 @@ namespace Tree
             Console.WriteLine("Post order ==> Left    Right    Root"); // 4 5 2 3 1
             Print(tree1.PostOrder(tree1.Root));
             Console.WriteLine();
+
+
+            // Max value in the Tree
+            Console.WriteLine("The max value in tree is : " + tree1.findMax(tree1.Root));
+            
 
             Node n6 = new Node(100);
             Node n7 = new Node(30);
