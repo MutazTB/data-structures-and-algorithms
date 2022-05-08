@@ -88,6 +88,31 @@ namespace Tree
                 }
                 
             return root;
-        }       
+        }
+
+        public List<int> BreadthFirst(Node node)
+        {
+            Queue<Node> breadth = new Queue<Node>();
+            List<int> values = new List<int>();
+
+            breadth.Enqueue(node);
+
+            while (breadth.TryPeek(out node))
+            {
+                Node front = breadth.Dequeue();
+                values.Add(front.Value);
+
+                if (front.Left != null)
+                {
+                    breadth.Enqueue(front.Left);
+                }
+
+                if (front.Right != null)
+                {
+                    breadth.Enqueue(front.Right);
+                }
+            }
+            return values;
+        }
     }
 }
