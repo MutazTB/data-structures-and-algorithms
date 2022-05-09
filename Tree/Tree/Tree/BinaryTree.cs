@@ -15,6 +15,10 @@ namespace Tree
         {
             Root = root;
         }
+        public BinaryTree()
+        {
+
+        }
         
         public List<int> PreOrder(Node node) // Root   Left   Right
         {
@@ -114,5 +118,45 @@ namespace Tree
             }
             return values;
         }
+
+        public List<object> FizzBuzzTree(Node node)
+        {
+            List<object> result = new List<object>();
+            if (node == null)
+            {
+                Console.WriteLine("Nothing here");
+            }
+            Queue<Node> FizzBuzz = new Queue<Node>();
+            FizzBuzz.Enqueue(node);
+            while (FizzBuzz.Count > 0)
+            {
+                for (int i = 0; i < FizzBuzz.Count; i++)
+                {
+                    if (FizzBuzz.First().Value % 5 == 0 && FizzBuzz.First().Value % 3 == 0)
+                    {
+                        result.Add("FizzBuzz");
+                    }
+                    else if (FizzBuzz.First().Value % 5 == 0)
+                    {
+                        result.Add("Buzz");
+                    }
+                    else if (FizzBuzz.First().Value % 3 == 0)
+                    {
+                        result.Add("Fizz");
+                    }
+                    else
+                    {
+                        result.Add(FizzBuzz.First().Value);
+                    }
+                    Node node2 = FizzBuzz.Dequeue();
+                    foreach (var item in node2.child)
+                    {
+                        FizzBuzz.Enqueue(item);
+                    }
+                }
+            }
+            return result;
+        }
+
     }
 }

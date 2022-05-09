@@ -23,3 +23,5 @@
 11. [Tree](Tree/Tree/README.md)
 
 12. [Breadth first](Tree/Breadth-first/README.md)
+
+13. [Fizz Buzz Tree](Tree/FizzBuzz/README.md)

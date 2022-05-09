@@ -10,10 +10,10 @@ namespace Tree
             Console.WriteLine();
 
             Node n1 = new Node(2);
-            Node n2 = new Node(7);
+            Node n2 = new Node(9);
             Node n3 = new Node(5);
-            Node n4 = new Node(2);
-            Node n5 = new Node(6);           
+            Node n4 = new Node(15);
+            Node n5 = new Node(30);           
 
             BinaryTree tree1 = new BinaryTree(n1);
             tree1.Root.Left = n2;
@@ -34,13 +34,34 @@ namespace Tree
             Console.WriteLine("Post order ==> Left    Right    Root"); // 4 5 2 3 1
             Print(tree1.PostOrder(tree1.Root));
             Console.WriteLine();
+
             // breadth first 
             Console.WriteLine("breadth");
             Print(tree1.BreadthFirst(tree1.Root));
+            Console.WriteLine();
 
             // Max value in the Tree
+            Console.WriteLine("Max value in the Tree");
             Console.WriteLine("The max value in tree is : " + tree1.findMax(tree1.Root));
+            Console.WriteLine();
             
+            List<object> values = new List<object>();
+            // FizzBuzz
+            Node root = new Node(5);
+            root.child.Add(new Node(10));
+            root.child.Add(new Node(15));
+            root.child.Add(new Node(17));
+            root.child.Add(new Node(25));
+            root.child.Add(new Node(30));
+            root.child[0].child.Add(new Node(35));
+            root.child[0].child.Add(new Node(40));
+            root.child[0].child.Add(new Node(45));
+            root.child[1].child.Add(new Node(50));
+            root.child[2].child.Add(new Node(52));
+            root.child[2].child.Add(new Node(71));
+            Console.WriteLine("FizzBuzz");
+            PrintFizzBuzz(tree1.FizzBuzzTree(root));
+            Console.WriteLine();
 
             Node n6 = new Node(100);
             Node n7 = new Node(30);
@@ -61,6 +82,16 @@ namespace Tree
         {
             Console.WriteLine("=+=+=+=+=+=+=");
             foreach (int value in values)
+            {
+                Console.Write($"{value} ");
+            }
+            Console.WriteLine();
+        }
+
+        public static void PrintFizzBuzz(List<object> val) 
+        {
+            Console.WriteLine("=+=+=+=+=+=+=");
+            foreach (object value in val)
             {
                 Console.Write($"{value} ");
             }
