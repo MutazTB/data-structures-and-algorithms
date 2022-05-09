@@ -164,5 +164,46 @@ namespace TreesTest
 
             Assert.Equal(5, tree1.findMax(tree1.Root));
         }
+
+        [Fact]
+        public void BreadthFirstTest()
+        {
+            Node n1 = new Node(2);
+            Node n2 = new Node(9);
+            Node n3 = new Node(5);
+            Node n4 = new Node(15);
+            Node n5 = new Node(30);
+
+            BinaryTree tree1 = new BinaryTree(n1);
+            tree1.Root.Left = n2;
+            tree1.Root.Right = n3;
+            tree1.Root.Left.Left = n4;
+            tree1.Root.Left.Right = n5;
+            
+            var list = tree1.BreadthFirst(tree1.Root);
+            Assert.Equal(new List<int> { 2 ,9 ,5 ,15 ,30 }, list);
+        }
+
+        [Fact]
+        public void FizzBuzzTreeTest()
+        {
+            Node root = new Node(5);
+            root.child.Add(new Node(10));
+            root.child.Add(new Node(15));
+            root.child.Add(new Node(17));
+            root.child.Add(new Node(25));
+            root.child.Add(new Node(30));
+            root.child[0].child.Add(new Node(35));
+            root.child[0].child.Add(new Node(40));
+            root.child[0].child.Add(new Node(45));
+            root.child[1].child.Add(new Node(50));
+            root.child[2].child.Add(new Node(52));
+            root.child[2].child.Add(new Node(71));
+            
+            BinaryTree tree1 = new BinaryTree(root);
+            
+            var list = tree1.FizzBuzzTree(root);
+            Assert.Equal(new List<object> { "Buzz", "Buzz", "FizzBuzz", 17, "Buzz", "FizzBuzz", "Buzz", "Buzz", "FizzBuzz" ,"Buzz" ,52, 71 }, list);
+        }        
     }
 }
