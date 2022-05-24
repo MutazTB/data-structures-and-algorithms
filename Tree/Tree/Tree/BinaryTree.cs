@@ -158,5 +158,25 @@ namespace Tree
             return result;
         }
 
+        public bool mutaz(Node folderOne, Node folderTwo)
+        {
+            int CountFolderOne = countLeaves(folderOne);
+            int CountFolderTwo = countLeaves(folderTwo);
+            if (CountFolderOne == CountFolderTwo) return true;
+            else return false;
+        }
+        private int countLeaves(Node node)
+        {
+            if (node == null) return 0;
+            if (node.isLeaf())
+            {
+                return 1;
+            }
+            else
+            {
+                return countLeaves(node.Left) + countLeaves(node.Right);
+            }
+        }
+
     }
 }

@@ -30,10 +30,14 @@
 
 13. [Fizz Buzz Tree](Tree/FizzBuzz/README.md)
 
+<<<<<<< HEAD
+14. [Insertion Sort](InsertionSort/InsertionSort/BLOG.md).
+=======
 
 12. [Tree](Tree/Tree/README.md)
 
 11. [Multi-bracket Validation.](stack-queue-brackets/README.md)
 
 
+>>>>>>> d4867660f0e8c033a99ed9f7419f0e459098676d
 
