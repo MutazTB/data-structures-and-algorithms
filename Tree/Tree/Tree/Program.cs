@@ -75,7 +75,31 @@ namespace Tree
             binarySearchTree.Add(n10);
             Console.WriteLine("Binary Search Tree");
             Print(binarySearchTree.binarySearchTree);
-            Console.WriteLine("The value of position Root.Left.Right is : " + binarySearchTree.Root.Left.Right.Value); 
+            Console.WriteLine("The value of position Root.Left.Right is : " + binarySearchTree.Root.Left.Right.Value);
+
+            Console.WriteLine("=+=+=+=+=+=+=");           
+            BinaryTree directoryOne = new BinaryTree();
+            directoryOne.Root = new Node("folder 1");
+            directoryOne.Root.Left = new Node("folder 2");
+            directoryOne.Root.Right = new Node("folder 3");
+            directoryOne.Root.Left.Left = new Node(".js");
+            directoryOne.Root.Left.Right = new Node(".js");
+            directoryOne.Root.Right.Left = new Node("Folder 4");
+            directoryOne.Root.Right.Left.Left = new Node(".js");
+            directoryOne.Root.Right.Left.Right = new Node(".js");
+            
+            BinaryTree directoryTwo = new BinaryTree();
+            directoryTwo.Root = new Node("folder 1");
+            directoryTwo.Root.Left = new Node("folder 2");
+            directoryTwo.Root.Right = new Node("folder 3");
+            directoryTwo.Root.Left.Left = new Node(".cs");
+            directoryTwo.Root.Left.Right = new Node(".cs");
+            directoryTwo.Root.Right.Right = new Node("folder 4");
+            directoryTwo.Root.Right.Right.Left = new Node(".cs");
+            directoryTwo.Root.Right.Right.Right = new Node(".cs");
+            Console.WriteLine(tree1.mutaz(directoryOne.Root, directoryTwo.Root));
+
+
         }
        
         public static void Print(List<int> values) // Prints out values in list
