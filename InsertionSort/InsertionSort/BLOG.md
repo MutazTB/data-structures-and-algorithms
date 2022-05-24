@@ -8,11 +8,11 @@ Inside your Main():
 
 - Output the unsorted array.
 - Send the array through your InsertionSort()
-- Output the sorted array
+- Output the sorted array.
 
 ## Approach & Efficiency
 - ### Time: O(n^2) <br>
-- ### Space: O(n)
+- ### Space: O(n).
 
 ## Whiteboard Process
 ![image](../image/InsertionSort.png)
