@@ -26,4 +26,5 @@
 
 13. [Fizz Buzz Tree](Tree/FizzBuzz/README.md)
 
-14. [Insertion Sort](InsertionSort/InsertionSort/BLOG.md)
+14. [Insertion Sort](InsertionSort/InsertionSort/BLOG.md).
+
