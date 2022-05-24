@@ -10,7 +10,9 @@
 
 5. [Linked List challenge 06](Challenge/LinkedList/LinkedList/LinkedList/README2.md)
 
+
 6. [KthFromEnd](Challenge/LinkedList/LinkedList/KTHLINKEDLIST/README.md) 
+
 
 7. [MergeLists](Challenge/LinkedList/LinkedList/MergLists/README.md)
 
@@ -20,11 +22,22 @@
 
 10. [Animal Shelter](Animal-Shelter/README.md)
 
+
 11. [Tree](Tree/Tree/README.md)
 
 12. [Breadth first](Tree/Breadth-first/README.md)
 
+
 13. [Fizz Buzz Tree](Tree/FizzBuzz/README.md)
 
+<<<<<<< HEAD
 14. [Insertion Sort](InsertionSort/InsertionSort/BLOG.md).
+=======
+
+12. [Tree](Tree/Tree/README.md)
+
+11. [Multi-bracket Validation.](stack-queue-brackets/README.md)
+
+
+>>>>>>> d4867660f0e8c033a99ed9f7419f0e459098676d
 
