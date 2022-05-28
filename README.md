@@ -22,22 +22,17 @@
 
 10. [Animal Shelter](Animal-Shelter/README.md)
 
-
-11. [Tree](Tree/Tree/README.md)
-
-12. [Breadth first](Tree/Breadth-first/README.md)
-
-
-13. [Fizz Buzz Tree](Tree/FizzBuzz/README.md)
-
-<<<<<<< HEAD
-14. [Insertion Sort](InsertionSort/InsertionSort/BLOG.md).
-=======
+11. [Multi-bracket Validation.](stack-queue-brackets/README.md)
 
 12. [Tree](Tree/Tree/README.md)
 
-11. [Multi-bracket Validation.](stack-queue-brackets/README.md)
+13. [Breadth first](Tree/Breadth-first/README.md)
+
+14. [Fizz Buzz Tree](Tree/FizzBuzz/README.md)
+
+15. [Insertion Sort](InsertionSort/InsertionSort/BLOG.md).
+
+16. [Merge sort](MergeSort/README.md)
 
 
->>>>>>> d4867660f0e8c033a99ed9f7419f0e459098676d
 

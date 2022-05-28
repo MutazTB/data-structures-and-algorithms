@@ -1,0 +1,16 @@
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\bin\Debug\net5.0\MergeSort.exe
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\bin\Debug\net5.0\MergeSort.deps.json
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\bin\Debug\net5.0\MergeSort.runtimeconfig.json
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\bin\Debug\net5.0\MergeSort.runtimeconfig.dev.json
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\bin\Debug\net5.0\MergeSort.dll
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\bin\Debug\net5.0\ref\MergeSort.dll
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\bin\Debug\net5.0\MergeSort.pdb
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\MergeSort.csproj.AssemblyReference.cache
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\MergeSort.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\MergeSort.AssemblyInfoInputs.cache
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\MergeSort.AssemblyInfo.cs
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\MergeSort.csproj.CoreCompileInputs.cache
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\MergeSort.dll
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\ref\MergeSort.dll
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\MergeSort.pdb
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\MergeSort\MergeSort\MergeSort\obj\Debug\net5.0\MergeSort.genruntimeconfig.cache
