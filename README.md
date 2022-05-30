@@ -34,5 +34,7 @@
 
 16. [Merge sort](MergeSort/README.md)
 
+17. [QuickSort](QuickSort/QuickSort/README.md)
+
 
 
