@@ -36,5 +36,7 @@
 
 17. [QuickSort](QuickSort/QuickSort/README.md)
 
+18. [Hash Table](HashTable/README.md)
+
 
 
