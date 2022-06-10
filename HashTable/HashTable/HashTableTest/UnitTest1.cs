@@ -19,16 +19,16 @@ namespace HashTableTest
             Node n4 = new Node("Liverpool FC", "6");
             Node n5 = new Node("Barcelona", "5");
 
-            Hashtable hashtable = new Hashtable();
+            Hashtable hashtable = new Hashtable(5);
 
-            hashtable.Add(n1);
-            hashtable.Add(n2);
-            hashtable.Add(n3);
-            hashtable.Add(n4);
-            hashtable.Add(n5);            
+            hashtable.set(n1.Key, n1.Value);
+            hashtable.set(n2.Key, n2.Value);
+            hashtable.set(n3.Key, n3.Value);
+            hashtable.set(n4.Key, n4.Value);
+            hashtable.set(n5.Key, n5.Value);
 
             //Assert
-            Assert.Equal("14", hashtable.Find("Real Madrid"));
+            Assert.Equal("14", hashtable.get("Real Madrid"));
         }
 
         /// <summary>
@@ -44,13 +44,13 @@ namespace HashTableTest
             Node n4 = new Node("Liverpool FC", "6");
             Node n5 = new Node("Barcelona", "5");
 
-            Hashtable hashtable = new Hashtable();
+            Hashtable hashtable = new Hashtable(5);
 
-            hashtable.Add(n1);
-            hashtable.Add(n2);
-            hashtable.Add(n3);
-            hashtable.Add(n4);
-            hashtable.Add(n5);            
+            hashtable.set(n1.Key, n1.Value);
+            hashtable.set(n2.Key, n2.Value);
+            hashtable.set(n3.Key, n3.Value);
+            hashtable.set(n4.Key, n4.Value);
+            hashtable.set(n5.Key, n5.Value);
 
             //Assert
             Assert.True(hashtable.Contains("AcMilan"));
@@ -60,8 +60,8 @@ namespace HashTableTest
         /// Test to check that hash table can handle collisions
         /// </summary>
         [Theory]
-        [InlineData("AcMilan", "0", "AcMilan", "7")]
-        [InlineData("Barcelona", "0", "Barcelona", "5")]
+        [InlineData("Inter", "0", "AcMilan", "7")]
+        [InlineData("Barcelona", "0", "Liverbool", "5")]
         public void CanAddWithCollisionItonHashTable(string key1, string val1, string key2, string val2)
         {
             //Arrange
@@ -70,15 +70,16 @@ namespace HashTableTest
             Node n3 = new Node(key1, val1);           
             Node n4 = new Node(key2, val2);
 
-            Hashtable hashtable = new Hashtable();
+            Hashtable hashtable = new Hashtable(5);
 
-            hashtable.Add(n1);
-            hashtable.Add(n2);
-            hashtable.Add(n3);
-            hashtable.Add(n4);            
+            hashtable.set(n1.Key, n1.Value);
+            hashtable.set(n2.Key, n2.Value);
+            hashtable.set(n3.Key, n3.Value);
+            hashtable.set(n4.Key, n4.Value);
+            
 
             //Assert
-            Assert.Equal(val2, hashtable.Find(key2));
+            Assert.Equal(val2, hashtable.get(key2));
         }
     }
 }
