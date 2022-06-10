@@ -6,10 +6,10 @@ A Hash Table is essentially an array with a set length filled with key value pai
 ## Challenge
 Implement a Hashtable with:
 
-1. Add(key, value) - void return
-2. Find(string key) - returns the value from key/value pair
-3. Contains(string key) - returns bool
-4. GetHash(key) - returns array index
+1. set(key, value) - Function to set the key value pair in HashTable
+2. get(string key) - Function to get value of a given key
+3. Contains(string key) - Method to see if a node is located inside of hashtable
+4. Hash(key) - Function to hash the key of an entry
 
 ## Examples of Use
 1. Hold unique values
