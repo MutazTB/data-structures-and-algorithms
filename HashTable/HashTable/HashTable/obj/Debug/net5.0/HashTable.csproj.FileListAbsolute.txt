@@ -13,3 +13,4 @@ C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\HashTable\HashTable\
 C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\HashTable\HashTable\HashTable\obj\Debug\net5.0\ref\HashTable.dll
 C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\HashTable\HashTable\HashTable\obj\Debug\net5.0\HashTable.pdb
 C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\HashTable\HashTable\HashTable\obj\Debug\net5.0\HashTable.genruntimeconfig.cache
+C:\Users\Mutaz\DataStructure\data-structures-and-algorithms\HashTable\HashTable\HashTable\obj\Debug\net5.0\HashTable.csproj.AssemblyReference.cache
