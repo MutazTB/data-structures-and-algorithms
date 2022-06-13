@@ -38,5 +38,7 @@
 
 18. [Hash Table](HashTable/README.md)
 
+19. [Repeated Word](HashTable/hashmap-repeated-word/README.md)
+
 
 
