@@ -19,7 +19,7 @@ namespace HashTableTest
             Node n4 = new Node("Liverpool FC", "6");
             Node n5 = new Node("Barcelona", "5");
 
-            Hashtable hashtable = new Hashtable(5);
+            Hashtable hashtable = new Hashtable();
 
             hashtable.set(n1.Key, n1.Value);
             hashtable.set(n2.Key, n2.Value);
@@ -44,7 +44,7 @@ namespace HashTableTest
             Node n4 = new Node("Liverpool FC", "6");
             Node n5 = new Node("Barcelona", "5");
 
-            Hashtable hashtable = new Hashtable(5);
+            Hashtable hashtable = new Hashtable();
 
             hashtable.set(n1.Key, n1.Value);
             hashtable.set(n2.Key, n2.Value);
@@ -70,7 +70,7 @@ namespace HashTableTest
             Node n3 = new Node(key1, val1);           
             Node n4 = new Node(key2, val2);
 
-            Hashtable hashtable = new Hashtable(5);
+            Hashtable hashtable = new Hashtable();
 
             hashtable.set(n1.Key, n1.Value);
             hashtable.set(n2.Key, n2.Value);

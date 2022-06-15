@@ -10,6 +10,7 @@ namespace Hashtables
         public string Value { get; set; }
         public Node Next { get; set; }
 
+        public Node() { }
         public Node(string key, string value)
         {
             Key = key;

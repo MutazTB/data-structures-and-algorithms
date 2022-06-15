@@ -12,7 +12,7 @@ namespace HashTable
         public string RepeatedWord(string sentence)
         {
             string[] words = sentence.Split(" ");
-            Hashtable hashtable = new Hashtable(5);
+            Hashtable hashtable = new Hashtable();
 
             foreach (string word in words)
             {

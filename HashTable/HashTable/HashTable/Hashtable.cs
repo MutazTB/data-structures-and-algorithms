@@ -6,98 +6,111 @@ namespace Hashtables
 {
     public class Hashtable
     {
-        private class MyNodes : List<Node> { }
-        private int length;
-        private MyNodes[] data;
+        /// <summary>
+        /// This array holds the key/value pairs
+        /// </summary>
+        public Node[] Table { get; set; } = new Node[1024];
+        /// <summary>
+        /// This is used for traversal when there are collisions
+        /// </summary>
+        public Node Current { get; set; }
 
-        //Hash Table Constructor
-        public Hashtable(int size)
-        {
-            length = size;
-            data = new MyNodes[size];
-        }
-        
-        private int hash(string key)
-        {
-            int hash = 0;
-
-            //Looping over length of key
-            for (int i = 0; i < key.Length; i++)
-            {
-                //hashing formula
-                hash = (hash + (int)key[i] * i) % length;
-            }
-            return hash;
-        }
-       
+        /// <summary>
+        /// This takes in a key/value pair, hashes it, and adds it to the table.
+        /// </summary>
+        /// <param name="key">The key which will be hashed</param>
+        /// <param name="value">The value corresponding to the key</param>
         public void set(string key, string value)
         {
-            //Setting index value to hash function
-            int index = hash(key);
-
-            //If hash function is empty (nothing stored)
-            if (data[index] == null)
+            if (Contains(key))
             {
-                //Create a new key value node
-                data[index] = new MyNodes();
+                throw new Exception("Key already exists");
             }
-            //Else, add Node to hash table at hash function index
-            data[index].Add(new Node(key, value));
-        }
-        
-        public string get(string key)
-        {
-            int index = hash(key);
-            if (data[index] == null)
+            int hash = Hash(key);
+            Node node = new Node
             {
-                //No match return 0
-                return "0";
-            }
-            //For each node in the array of nodes
-            foreach (var node in data[index])
+                Key = key,
+                Value = value
+            };
+            if (Table[hash] == null)
             {
-                //if the node key equals the key inserted
-                if (node.Key.Equals(key))
-                {
-                    //Return the value of that key
-                    return node.Value;
-                }
+                Table[hash] = node;
+                return;
             }
-            return "0";
+            Current = Table[hash];
+            Table[hash] = node;
+            Table[hash].Next = Current;
         }
 
         /// <summary>
-        /// Method to search all keys in hash table
+        /// This takes a key and "hashes" it into an index within the hash table
         /// </summary>
-        /// <returns></returns>
-        public List<string> keys()
+        /// <param name="key">The key to be hashed</param>
+        /// <returns>The index where the key/value pair will be stored</returns>
+        public int Hash(string key)
         {
-            List<string> result = new List<string>();
-            //Looping over array of Nodes
-            for (int i = 0; i < data.Length; i++)
+            int hash = 0;
+            foreach (char x in key)
             {
-                //If node not empty
-                if (data[i] != null)
-                {
-                    //Start a second loop over the hash table
-                    for (int j = 0; j < length; j++)
-                    {
-                        //Add keys to list. The First element in the Node Array will be null so this logic works. The second array element [1] onwards holds a list of key value pairs and it is this list that j is incrementing to pull out all the keys. 
-                        //Will iterate all increments of j before moving out of the loop to the outer for loop whch traverses the Node Array
-                        result.Add(data[i][j].Key);
-                    }
-                }
+                hash += x;
             }
-            return result;
+            hash *= 599;
+            hash /= Table.Length;
+
+            return hash;
         }
-        
+
+        /// <summary>
+        /// This finds the value corresponding to the given key
+        /// If there is no key stored in the table, it will return -1
+        /// </summary>
+        /// <param name="key">The key to find</param>
+        /// <returns>The value corresponding to the key</returns>
+        public string get(string key)
+        {
+            int index = Hash(key);
+            Current = Table[index];
+            while (Current.Next != null)
+            {
+                if (Current.Key == key)
+                {
+                    return Current.Value;
+                }
+                Current = Current.Next;
+            }
+            if (Current.Key == key)
+            {
+                return Current.Value;
+            }
+            return null;
+        }
+
+        /// <summary>
+        /// This checks to see if a key is within the table.
+        /// </summary>
+        /// <param name="key">The key to find</param>
+        /// <returns>true or false depending on whether the key exists in the table</returns>
         public bool Contains(string key)
         {
-            if (get(key) == "0")
+            int index = Hash(key);
+            Current = Table[index];
+            if (Current == null)
             {
                 return false;
             }
-            return true;
+            while (Current.Next != null)
+            {
+                if (Current.Key == key)
+                {
+                    return true;
+                }
+                Current = Current.Next;
+            }
+            if (Current.Key == key)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
