@@ -42,5 +42,7 @@
 
 20. [Hash Table LeftJoin](HashTable/LeftJoin/README.md)
 
+21. [Tree Insertion](HashTable/TreeInsertion/REDME.md)
+
 
 
