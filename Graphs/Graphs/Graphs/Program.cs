@@ -63,6 +63,13 @@ namespace Graphs
             {
                 Console.WriteLine($"{node.Value}");
             }
+
+            Console.WriteLine("Here is the breadthfirst traversal");
+            List<Node> breadthfirst = graph.BreadthFirst(n1);
+            foreach (Node node in breadthfirst)
+            {
+                Console.WriteLine(node.Value);
+            }
             Console.WriteLine();                      
         }
     }
