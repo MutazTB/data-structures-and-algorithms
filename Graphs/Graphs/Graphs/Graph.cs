@@ -8,57 +8,47 @@ namespace Graphs
 {
     public class Graph
     {        
-        /// <summary>
-        /// This list holds all the nodes that are in the graph.
-        /// It is initialized with an empty list with the graph.
-        /// </summary>
         public List<Node> Nodes { get; set; } = new List<Node>();
 
-        /// <summary>
-        /// This adds 2 nodes to the graph and also connects them together.
-        /// </summary>
-        /// <param name="root">The first node</param>
-        /// <param name="addNode">The second node</param>
-        public void AddEdge(Node root, Node addNode)
+        public void AddEdge(Node firstNode, Node secondNode, int weight)
         {
-            root.Children.Add(addNode);
-            addNode.Children.Add(root);
-            if (!Nodes.Contains(root))
+            if (firstNode == secondNode)
             {
-                Nodes.Add(root);
+                Node point = Nodes.Find(v => v.Value == firstNode.Value);
+                Edge edge = new Edge(point, weight);
+                Nodes.Find(v => v.Value == firstNode.Value).Edge.Add(edge);
+                return;
             }
-            if (!Nodes.Contains(addNode))
-            {
-                Nodes.Add(addNode);
-            }
+
+            Node firstPoint = Nodes.Find(v => v.Value == firstNode.Value);
+            Node secondPoint = Nodes.Find(v => v.Value == secondNode.Value);
+
+            Edge firstEdge = new Edge(secondPoint, weight);
+            firstPoint.Edge.Add(firstEdge);
+
+            Edge secondEdge = new Edge(firstPoint, weight);
+            secondPoint.Edge.Add(secondEdge);
         }
 
-        /// <summary>
-        /// This returns all the nodes in the graph
-        /// </summary>
-        /// <returns>All the nodes in the graph</returns>
+        public Object AddNode(Object value)  // Adds a node to the graph.
+        {
+            Node node = new Node(value);
+            Nodes.Add(node);
+            return node;
+        }
         public List<Node> GetNodes()
         {
             return Nodes;
         }
 
-        /// <summary>
-        /// This returns the number of nodes in the graph
-        /// </summary>
-        /// <returns>The number of nodes in the graph</returns>
         public int Size()
         {
             return Nodes.Count;
         }
 
-        /// <summary>
-        /// This finds and returns the nodes attached to the current node.
-        /// </summary>
-        /// <param name="root">The current node</param>
-        /// <returns>The list of nodes</returns>
-        public List<Node> GetNeighbors(Node root)
+        public List<Edge> GetNeighbors(Node node) // Returns a count of all the nodes in a graph
         {
-            return root.Children;
+            return Nodes.Find(v => v.Value == node.Value).Edge;
         }
 
 
@@ -84,6 +74,28 @@ namespace Graphs
                 }
             }
             return order;
+        }
+
+        public int GetEdge(Graph graph, string[] cities)
+        {
+            int cost = 0;
+            if (cities.Length <= 1)
+            {
+                return 0;
+            }
+            for (int i = 0; i < cities.Length - 1; i++)
+            {
+                List<Edge> nodeEdges = graph.GetNeighbors(new Node(cities[i]));
+                if (!nodeEdges.Exists(n => n.Neighbor.Value.ToString() == cities[i + 1]))
+                {
+                    return 0;
+                }
+                else
+                {
+                    cost += nodeEdges.Find(n => n.Neighbor.Value.ToString() == cities[i + 1]).Weight;
+                }
+            }
+            return cost;
         }
     }
 }

@@ -8,65 +8,35 @@ namespace TestGraph
     public class UnitTest1
     {
         [Fact]
-        public void AddTest()
+        public void GetEdgeTest()
         {
-            // Arrange
-            Node n1 = new Node(1);
-            Node n2 = new Node(2);
-            Graph graph = new Graph();
+            Graph graph2 = new Graph();
 
-            // Act
-            graph.AddEdge(n1, n2);
+            Node n1 = new Node("Metroville");
+            Node n2 = new Node("Pandora");
+            Node n3 = new Node("Arendelle");
+            Node n4 = new Node("New Monstropolis");
+            Node n5 = new Node("Narnia");
+            Node n6 = new Node("Naboo");
 
-            // Assert
-            Assert.Equal(n2, n1.Children[0]);
+            graph2.AddNode("Metroville");
+            graph2.AddNode("Pandora");
+            graph2.AddNode("Arendelle");
+            graph2.AddNode("Narnia");
+            graph2.AddNode("New Monstropolis");
+
+            graph2.AddEdge(n1, n2, 150);
+            graph2.AddEdge(n2, n3, 99);
+            graph2.AddEdge(n3, n5, 82);
+            graph2.AddEdge(n2, n4, 105);
+            graph2.AddEdge(n1, n5, 26);
+
+            string[] cities = { "Metroville", "Pandora", "Arendelle" };
+            var result = graph2.GetEdge(graph2, cities);
+            Assert.Equal(249,result);
         }
-        [Fact]
-        public void SizeTest()
-        {
-            // Arrange
-            Node n1 = new Node(1);
-            Node n2 = new Node(2);
-            Node n3 = new Node(3);
-            Node n4 = new Node(4);
-            Node n5 = new Node(5);
 
-            Graph graph = new Graph();
 
-            graph.AddEdge(n1, n2);
-            graph.AddEdge(n1, n3);
-            graph.AddEdge(n2, n4);
-            graph.AddEdge(n3, n5);
 
-            // Act
-            int size = graph.Size();
-
-            // Assert
-            Assert.Equal(5, size);
-        }
-        [Fact]
-        public void GetNeighborsTest()
-        {
-            // Arrange
-            Node n1 = new Node(1);
-            Node n2 = new Node(2);
-            Node n3 = new Node(3);
-            Node n4 = new Node(4);
-            Node n5 = new Node(5);
-
-            Graph graph = new Graph();
-
-            graph.AddEdge(n1, n2);
-            graph.AddEdge(n1, n3);
-            graph.AddEdge(n2, n4);
-            graph.AddEdge(n3, n5);
-
-            // Act
-            List<Node> neighbors = graph.GetNeighbors(n2);
-
-            // Assert
-            Assert.Equal(1, neighbors[0].Value);
-            Assert.Equal(4, neighbors[1].Value);
-        }
     }
 }
