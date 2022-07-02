@@ -48,5 +48,7 @@
 
 23. [Breadth First](Graphs/Graphs/BreadthFirst/README.md)
 
+24. [Graph Business Trip](Graphs/BusinessTrip/README.md)
+
 
 
