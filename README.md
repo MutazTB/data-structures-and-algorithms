@@ -50,5 +50,5 @@
 
 24. [Graph Business Trip](Graphs/BusinessTrip/README.md)
 
-
+25. [Depth First Helper](Graphs/DepthFirst/README.md)
 
