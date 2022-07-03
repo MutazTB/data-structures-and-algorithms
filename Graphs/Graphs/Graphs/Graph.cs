@@ -97,5 +97,31 @@ namespace Graphs
             }
             return cost;
         }
+
+        public List<Node> DepthFirst(Graph graph)
+        {
+            if (graph.Nodes.Count == 0)
+            {
+                return null;
+            }
+            List<Node> result = new List<Node>();
+            Node root = graph.Nodes[0];
+
+            result = DepthFirstHelper(graph, result, root);
+            return result;
+        }
+        public List<Node> DepthFirstHelper(Graph graph, List<Node> list1, Node root) 
+        {
+            root.Visited = true;
+            list1.Add(root);
+            foreach (Edge edge in root.Edge)
+            {
+                if (!edge.Neighbor.Visited)
+                {
+                    DepthFirstHelper(graph, list1, edge.Neighbor);
+                }
+            }
+            return list1;
+        }
     }
 }
